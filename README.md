@@ -8,7 +8,3 @@ Write a method that take one parameter of type array then reverse this array wit
 
 
 
-| Number      | The Challenge  |  Link         |
-| -------     |    ------      |  --------     |
-|         1   | Reverse Array  | [Reverse Array](https://github.com/Yousef-Abu-Qatrieh/data-structures-and-algorithms/tree/array-reverse) |
-
