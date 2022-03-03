@@ -1,14 +1,12 @@
 
-# Reverse Array
-Write a method that take one parameter of type array then reverse this array without using build-in methods
+# Insert Shift Array
+Write a function called insertShiftArray which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.  
 
-![Screenshot 2022-02-26 161249](https://user-images.githubusercontent.com/97651232/155844871-675f811d-bd8f-4fa9-ba1e-dec067119a37.png)
-
-# data-structures-and-algorithms
+![InsertShiftArray](https://user-images.githubusercontent.com/97651232/156646582-02956742-564f-48eb-90a3-4ca9c55da9af.png)
 
 
 
-| Number      | The Challenge  |  Link         |
-| -------     |    ------      |  --------     |
-|         1   | Reverse Array  | [Reverse Array](https://github.com/Yousef-Abu-Qatrieh/data-structures-and-algorithms/tree/array-reverse) |
+
+
+
 
