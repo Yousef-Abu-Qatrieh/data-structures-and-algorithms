@@ -7,14 +7,25 @@ public class App {
 
 
     public static void main(String[] args) {
-        LinkedList<String> linkedList=new LinkedList();
-        linkedList.insert("Ali");
-        linkedList.insert("Ahmad");
-        linkedList.insert("yousef");
-        linkedList.insert("Jason");
-        System.out.println(linkedList.include("Ali"));
-        System.out.println(linkedList.include("osama"));
+        LinkedList<Integer> linkedList = new LinkedList();
+        linkedList.insert(1);
+        linkedList.insert(2);
+        linkedList.insert(3);
+        linkedList.insert(5);
+
+        System.out.println(linkedList.include(4));
+        System.out.println(linkedList.include(1));
 
         System.out.println(linkedList.toString());
+            LinkedList <Integer> linkedList1=new LinkedList();
+            linkedList1.insert(1);
+            linkedList1.append(3);
+            linkedList1.append(2);
+            linkedList1.append(5);
+            linkedList1.insertBefore(3,5);
+
+        System.out.println(linkedList1);
+        linkedList1.insertAfter(2,4);
+        System.out.println(linkedList1);
     }
 }
