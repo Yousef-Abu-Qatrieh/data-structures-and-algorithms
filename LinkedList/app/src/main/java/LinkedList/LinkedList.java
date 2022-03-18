@@ -85,6 +85,19 @@ public class LinkedList<T> {
         }
         return false;
     }
+    public void  reverseSinglyLinkedList(){
+        Node pointer =this.head;
+        Node previous =null;
+        Node newNode;
+       while (pointer!= null){
+           newNode=pointer;
+           pointer=pointer.next;
+           newNode.next=previous;
+           previous=newNode;
+           head=newNode;
+       }
+
+    }
 
     public String toString() {
         Node pointer = this.head;

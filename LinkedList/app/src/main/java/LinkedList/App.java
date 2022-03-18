@@ -27,5 +27,11 @@ public class App {
         System.out.println(linkedList1);
         linkedList1.insertAfter(2,4);
         System.out.println(linkedList1);
+        System.out.println("**********************************************");
+        LinkedList list3=new LinkedList<Integer>();
+        list3=linkedList1;
+        list3.reverseSinglyLinkedList();
+        System.out.println(list3);
+
     }
 }
