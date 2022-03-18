@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c30b7412-517e-44e3-88a1-46f706500fe6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../LinkedList-zip/app/src/main/java/LinkedList/zip/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../LinkedList-zip/app/src/main/java/LinkedList/zip/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/LinkedList/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/LinkedList/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/LinkedList/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/LinkedList/LinkedList.java" afterDir="false" />
-    </list>
+    <list default="true" id="c30b7412-517e-44e3-88a1-46f706500fe6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +69,11 @@
       <option name="presentableId" value="Default" />
       <updated>1647014666125</updated>
       <workItem from="1647014676588" duration="583000" />
-      <workItem from="1647133680896" duration="5738000" />
+      <workItem from="1647133680896" duration="6335000" />
+      <workItem from="1647245701701" duration="3851000" />
+      <workItem from="1647271245754" duration="3667000" />
+      <workItem from="1647331939960" duration="2250000" />
+      <workItem from="1647506542360" duration="1309000" />
     </task>
     <servers />
   </component>
