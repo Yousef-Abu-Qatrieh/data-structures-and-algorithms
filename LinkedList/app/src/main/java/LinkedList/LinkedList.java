@@ -51,6 +51,7 @@ public class LinkedList<T> {
                 pointer.next = newNode;
                 break;
             }
+            pointer=pointer.next;
 
         }
 
@@ -65,8 +66,8 @@ public class LinkedList<T> {
         while (pointer !=null){
 
             if (pointer.value==value){
-               newNode.next= pointer.next;
-               pointer.next= newNode;
+                newNode.next= pointer.next;
+                pointer.next= newNode;
                 break;
             }
             pointer=pointer.next;
@@ -78,6 +79,7 @@ public class LinkedList<T> {
     }
     public int kthFromFront(int k){
 
+
         Node current = head;
         int count = 0;
         while (current != null)
@@ -87,6 +89,22 @@ public class LinkedList<T> {
             count++;
             current = current.next;
 
+
+        Node current = head;
+        int count = 0;
+        while (current != null)
+        {
+            if (count == k){
+                return (int) current.value;}
+            count++;
+            current = current.next;
+
+
+
+        }
+
+        throw new NoSuchElementException("the key you are looking for not found ");
+    }
 
 
         }
@@ -116,13 +134,13 @@ public class LinkedList<T> {
         Node pointer =this.head;
         Node previous =null;
         Node newNode;
-       while (pointer!= null){
-           newNode=pointer;
-           pointer=pointer.next;
-           newNode.next=previous;
-           previous=newNode;
-           head=newNode;
-       }
+        while (pointer!= null){
+            newNode=pointer;
+            pointer=pointer.next;
+            newNode.next=previous;
+            previous=newNode;
+            head=newNode;
+        }
 
     }
 
