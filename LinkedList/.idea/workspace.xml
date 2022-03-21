@@ -7,10 +7,7 @@
     <list default="true" id="c30b7412-517e-44e3-88a1-46f706500fe6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../LinkedList-zip/app/src/main/java/LinkedList/zip/LinkedList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../LinkedList-zip/app/src/main/java/LinkedList/zip/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/LinkedList/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/LinkedList/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StackAndQueue/app/src/test/java/StackAndQueue/StackAndQueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StackAndQueue/app/src/test/java/StackAndQueue/StackAndQueueTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +198,7 @@
       <workItem from="1647614604338" duration="648000" />
       <workItem from="1647615493095" duration="640000" />
       <workItem from="1647717891623" duration="10802000" />
-      <workItem from="1647848716945" duration="7176000" />
+      <workItem from="1647848716945" duration="7870000" />
     </task>
     <servers />
   </component>
