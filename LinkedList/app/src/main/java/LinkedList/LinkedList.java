@@ -79,6 +79,7 @@ public class LinkedList<T> {
     }
     public int kthFromFront(int k){
 
+
         Node current = head;
         int count = 0;
         while (current != null)
@@ -88,6 +89,22 @@ public class LinkedList<T> {
             count++;
             current = current.next;
 
+
+        Node current = head;
+        int count = 0;
+        while (current != null)
+        {
+            if (count == k){
+                return (int) current.value;}
+            count++;
+            current = current.next;
+
+
+
+        }
+
+        throw new NoSuchElementException("the key you are looking for not found ");
+    }
 
 
         }
