@@ -21,12 +21,14 @@ public class App {
         System.out.println(linkedList.toString());
 
 
+
         LinkedList <Integer> linkedList1=new LinkedList();
         linkedList1.insert(1);
         linkedList1.append(3);
         linkedList1.append(2);
         linkedList1.append(5);
         linkedList1.insertBefore(3,5);
+
 
             LinkedList <Integer> linkedList1=new LinkedList();
             linkedList1.insert(1);
@@ -47,6 +49,8 @@ public class App {
         list3.reverseSinglyLinkedList();
 
         System.out.println(list3);
+
+
 
 
 

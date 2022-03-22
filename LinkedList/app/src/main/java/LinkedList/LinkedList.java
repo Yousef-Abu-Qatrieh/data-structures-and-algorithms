@@ -13,6 +13,9 @@ public class LinkedList<T> {
 
         this.tail = null;
 
+
+        this.tail = null;
+
     }
 
     public void insert(T value) {
@@ -101,28 +104,33 @@ public class LinkedList<T> {
 
         this.tail=null;
 
+
     }
 
     public void insert(T value) {
         Node newNode = new Node(value);
         newNode.next = this.head;
-        if(this.head == null){
+        if (this.head == null) {
             this.tail = newNode;
-        }else{
+        } else {
             newNode.next.previous = newNode;
         }
         this.head = newNode;
     }
 
     public void append(T value) {
-        Node newNode = new Node(value);
+
         Node pointer = head;
+        if(pointer==null){
+            insert(value);
+        }
         while (pointer != null) {
             if (pointer.next == null) {
+                Node newNode = new Node(value);
                 pointer.next = newNode;
+                newNode.next = null;
+                break;
             }
-
-            newNode.next = null;
             pointer = pointer.next;
         }
     }
@@ -140,43 +148,54 @@ public class LinkedList<T> {
                 pointer.next = newNode;
                 break;
             }
+
+            pointer = pointer.next;
+
             pointer=pointer.next;
+
 
         }
 
 
     }
-    public void insertAfter(T value,T newValue){
-        Node pointer =head;
-        Node newNode=new Node(newValue);
+
+    public void insertAfter(T value, T newValue) {
+        Node pointer = head;
+        Node newNode = new Node(newValue);
         if (pointer.next == null) {
             insert(newValue);
         }
-        while (pointer !=null){
+        while (pointer != null) {
+
+
+            if (pointer.value == value) {
+                newNode.next = pointer.next;
+                pointer.next = newNode;
 
             if (pointer.value==value){
                 newNode.next= pointer.next;
                 pointer.next= newNode;
+
                 break;
             }
-            pointer=pointer.next;
+            pointer = pointer.next;
         }
 
 
-
-
     }
-    public int kthFromFront(int k){
+
+    public int kthFromFront(int k) {
 
 
         Node current = head;
         int count = 0;
-        while (current != null)
-        {
-            if (count == k){
-                return (int) current.value;}
+        while (current != null) {
+            if (count == k) {
+                return (int) current.value;
+            }
             count++;
             current = current.next;
+
 
 
         Node current = head;
@@ -196,13 +215,43 @@ public class LinkedList<T> {
     }
 
 
+
         }
 
         throw new NoSuchElementException("the key you are looking for not found ");
     }
 
+    public int size() {
+        if(head == null) return -1;
+
+        Node tempHead = head;
+        int counter = 0;
+        while (tempHead != null) {
+            counter++;
+            tempHead = tempHead.next;
+        }
+        return counter;
+    }
+
+    public Object kthFromEnd(int k) {
+
+        int counter = size() - k;
+        Node pointer = head;
+try {
 
 
+        while (pointer != null && counter != 0) {
+            counter--;
+            pointer = pointer.next;
+        }  return (int) pointer.value-1;
+}catch (Exception e){
+    System.err.println(e.getMessage());
+    return (T) "The key you are looking for not found";
+}
+
+
+
+    }
 
 
 
@@ -249,6 +298,15 @@ public class LinkedList<T> {
     public void reverseSinglyLinkedList() {
         Node pointer = this.head;
         Node previous = null;
+
+        Node newNode;
+        while (pointer != null) {
+            newNode = pointer;
+            pointer = pointer.next;
+            newNode.next = previous;
+            previous = newNode;
+            head = newNode;
+
         Node newNode;
         while (pointer != null) {
             newNode = pointer;
@@ -267,6 +325,7 @@ public class LinkedList<T> {
             newNode.next=previous;
             previous=newNode;
             head=newNode;
+
 
         }
 
