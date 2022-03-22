@@ -20,6 +20,7 @@ public class App {
 
         System.out.println(linkedList.toString());
 
+
             LinkedList <Integer> linkedList1=new LinkedList();
             linkedList1.insert(1);
             linkedList1.append(3);
@@ -38,6 +39,8 @@ public class App {
         list3.reverseSinglyLinkedList();
 
         System.out.println(list3);
+
+
 
 
 
