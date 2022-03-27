@@ -7,6 +7,7 @@ import StackAndQueue.queue.data.QueueNode;
 import StackAndQueue.queue.structure.PseudoQueue;
 import StackAndQueue.queue.structure.Queue;
 import StackAndQueue.stack.data.StackNode;
+import StackAndQueue.stack.structure.MaxStack;
 import StackAndQueue.stack.structure.Stack;
 
 public class App {
@@ -16,8 +17,8 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
-        Stack stack =new Stack();
-        if (stack.isEmpty()){
+        Stack stack = new Stack();
+        if (stack.isEmpty()) {
             System.out.println("Stack is empty");
         }
         stack.push(new StackNode(1));
@@ -25,14 +26,14 @@ public class App {
         stack.push(new StackNode(3));
         stack.push(new StackNode(4));
         System.out.println(stack);
-        System.out.println( stack.peek());
+        System.out.println(stack.peek());
 
         System.out.println(stack.pop());
         System.out.println(stack);
         System.out.println(stack.pop());
         System.out.println("*********************************Queue*********************************");
-        Queue queue=new Queue();
-        System.out.println( queue.isEmpty());
+        Queue queue = new Queue();
+        System.out.println(queue.isEmpty());
         queue.enqueue(new QueueNode(1));
         queue.enqueue(new QueueNode(2));
         queue.enqueue(new QueueNode(3));
@@ -41,10 +42,20 @@ public class App {
         System.out.println(queue.peek());
         System.out.println(queue.dequeue());
         System.out.println("*********************************PseudoQueue*********************************");
-        PseudoQueue pseudoQueue=new PseudoQueue();
+        PseudoQueue pseudoQueue = new PseudoQueue();
         pseudoQueue.enqueue(new StackNode("1"));
         System.out.println(pseudoQueue);
         System.out.println(pseudoQueue.dequeue());
+        System.out.println("*********************************Get Max*********************************");
+        MaxStack maxStack = new MaxStack();
+        maxStack.pushMax(5);
+        maxStack.pushMax(30);
+        maxStack.pushMax(25);
+        maxStack.pushMax(40);
+
+        maxStack.popMax();
+        maxStack.getMax();
+        maxStack.peekTopMaxStack();
 
 
     }
