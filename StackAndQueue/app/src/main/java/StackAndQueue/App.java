@@ -4,6 +4,7 @@
 package StackAndQueue;
 
 import StackAndQueue.queue.data.QueueNode;
+import StackAndQueue.queue.structure.PseudoQueue;
 import StackAndQueue.queue.structure.Queue;
 import StackAndQueue.stack.data.StackNode;
 import StackAndQueue.stack.structure.Stack;
@@ -39,6 +40,11 @@ public class App {
         System.out.println(queue);
         System.out.println(queue.peek());
         System.out.println(queue.dequeue());
+        System.out.println("*********************************PseudoQueue*********************************");
+        PseudoQueue pseudoQueue=new PseudoQueue();
+        pseudoQueue.enqueue(new StackNode("1"));
+        System.out.println(pseudoQueue);
+        System.out.println(pseudoQueue.dequeue());
 
 
     }
