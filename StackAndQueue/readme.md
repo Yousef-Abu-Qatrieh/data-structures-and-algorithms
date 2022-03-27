@@ -40,3 +40,5 @@ big o(1)
 6-peek return last node in the top without remove it   
 7-dequeue remove node from the front of queue
 8- isEmpty check if Queue is empty or not     
+PseudoQueue that implement Queue using stack   
+![image](https://user-images.githubusercontent.com/97651232/160261910-709f4774-9e30-487f-9d2b-d0dc2bbac63c.png)
