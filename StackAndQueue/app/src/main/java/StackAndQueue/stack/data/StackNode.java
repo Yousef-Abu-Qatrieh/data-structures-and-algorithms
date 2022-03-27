@@ -2,7 +2,7 @@ package StackAndQueue.stack.data;
 
 public class StackNode<T> {
     private StackNode next;
-    private final T value;
+    private  T value;
 
     public StackNode(T value) {
         this.value = value;
@@ -16,7 +16,7 @@ public class StackNode<T> {
         return value;
     }
 
-    public void setNext(StackNode next) {
+    public void setNext(StackNode<T> next) {
         this.next = next;
     }
 

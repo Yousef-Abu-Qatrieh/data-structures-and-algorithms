@@ -26,8 +26,8 @@ public class PseudoQueue {
 
     }
 
-    public StackNode dequeue() {
-       StackNode value=stack2.peek();
+    public Object dequeue() {
+       Object value=stack2.peek();
         stack2.pop();
         return value;
     }

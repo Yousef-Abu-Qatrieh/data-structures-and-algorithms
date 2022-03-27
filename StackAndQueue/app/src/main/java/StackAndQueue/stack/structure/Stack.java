@@ -5,11 +5,13 @@ import StackAndQueue.stack.data.StackNode;
 import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
-public class Stack {
-    private StackNode top;
+public class Stack<T> {
+    private StackNode<T> top;
+
     public Stack(){
         this.top=top;
     }
+
     // isEmpty method that check if the stack is empty or not
     public boolean isEmpty(){
         if(top==null){
@@ -18,14 +20,15 @@ public class Stack {
             return false;
         }
     }
-    public StackNode push (StackNode value){
+    public StackNode<T> push (T value){
+        StackNode<T> stackNode = new StackNode<>(value);
         if(isEmpty()){
-            top= (StackNode) value;
-            return (StackNode) value;
+            top= stackNode;
+            return stackNode;
         }else {
-            value.setNext(top);
-            top=value;
-            return value;
+            stackNode.setNext(top);
+            top=  stackNode;
+            return stackNode;
         }
 
     }
@@ -40,17 +43,25 @@ public class Stack {
 
         return  top;
     }
-    public StackNode peek(){
+    public T peek(){
         if (isEmpty()){
             throw new NoSuchElementException("Stack is empty");
         }
-        return top;
+        return top.getValue();
     }
+
+
 
     @Override
     public String toString() {
-        return "Stack{" +
-                "top=" + top +
-                '}';
+        StackNode<T> pointer = top;
+        String out = "";
+        while (pointer != null){
+            out +="{ "+ pointer.getValue()+" } -> ";
+            pointer = pointer.getNext();
+        }
+        out +="{ NULL }";
+        return out;
     }
+
 }
