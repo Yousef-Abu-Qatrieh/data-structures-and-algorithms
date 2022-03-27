@@ -39,6 +39,9 @@ application {
     mainClass = 'LinkedList.App'
 }
 
+
+
+
 test {
     useJUnitPlatform()
 }
