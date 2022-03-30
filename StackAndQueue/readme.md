@@ -44,4 +44,4 @@ PseudoQueue that implement Queue using stack
 ![image](https://user-images.githubusercontent.com/97651232/160261910-709f4774-9e30-487f-9d2b-d0dc2bbac63c.png)  
 
 GetMax that implement Stack to find max Node value in stack   
-![Picture2](https://user-images.githubusercontent.com/97651232/160303418-c1ce79c1-f541-44b6-81c1-1b20a5ea2044.png)
+![Picture3](https://user-images.githubusercontent.com/97651232/160304801-d6a9defb-33b9-4068-9dd5-5f786180ef3b.png)
