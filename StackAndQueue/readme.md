@@ -44,4 +44,9 @@ PseudoQueue that implement Queue using stack
 ![image](https://user-images.githubusercontent.com/97651232/160261910-709f4774-9e30-487f-9d2b-d0dc2bbac63c.png)  
 
 GetMax that implement Stack to find max Node value in stack   
+
 ![Picture3](https://user-images.githubusercontent.com/97651232/160304801-d6a9defb-33b9-4068-9dd5-5f786180ef3b.png)
+Animal shelter that return dog or cat depend on pref value   
+BigO()  
+time o(n)
+space o(1)

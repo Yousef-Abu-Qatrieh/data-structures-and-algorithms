@@ -4,8 +4,7 @@
 package StackAndQueue;
 
 import StackAndQueue.queue.data.QueueNode;
-import StackAndQueue.queue.structure.PseudoQueue;
-import StackAndQueue.queue.structure.Queue;
+import StackAndQueue.queue.structure.*;
 import StackAndQueue.stack.data.StackNode;
 import StackAndQueue.stack.structure.MaxStack;
 import StackAndQueue.stack.structure.Stack;
@@ -56,6 +55,19 @@ public class App {
         maxStack.popMax();
         maxStack.getMax();
         maxStack.peekTopMaxStack();
+        System.out.println("*********************************animal shelter*********************************");
+        AnimalShelter animalShelter=new AnimalShelter();
+        Animal dog=new Dog("Dog");
+        Animal cat=new Cat("Cat");
+        Animal animal=new Animal("tyger");
+        animalShelter.enqueue(dog);
+        animalShelter.enqueue(dog);
+        animalShelter.enqueue(cat);
+        animalShelter.enqueue(cat);
+        animalShelter.enqueue(cat);
+
+        System.out.println(animalShelter);
+        System.out.println(animalShelter.dequeue("cat"));
 
 
     }
