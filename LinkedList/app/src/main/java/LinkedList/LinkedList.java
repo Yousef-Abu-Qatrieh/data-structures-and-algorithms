@@ -10,6 +10,10 @@ public class LinkedList<T> {
 
     public LinkedList() {
         this.head = null;
+
+        this.tail = null;
+
+
         this.tail = null;
 
     }
@@ -98,6 +102,125 @@ public class LinkedList<T> {
         throw new NoSuchElementException("the key you are looking for not found ");
     }
 
+        this.tail=null;
+
+
+    }
+
+    public void insert(T value) {
+        Node newNode = new Node(value);
+        newNode.next = this.head;
+        if (this.head == null) {
+            this.tail = newNode;
+        } else {
+            newNode.next.previous = newNode;
+        }
+        this.head = newNode;
+    }
+
+    public void append(T value) {
+
+        Node pointer = head;
+        if(pointer==null){
+            insert(value);
+        }
+        while (pointer != null) {
+            if (pointer.next == null) {
+                Node newNode = new Node(value);
+                pointer.next = newNode;
+                newNode.next = null;
+                break;
+            }
+            pointer = pointer.next;
+        }
+    }
+
+    public void insertBefore(T value, T newValue) {
+        Node pointer = head;
+        Node newNode = new Node(newValue);
+        while (pointer != null) {
+            if (pointer.next == null) {
+                insert(newValue);
+            }
+
+            if (pointer.next.value == value) {
+                newNode.next = pointer.next;
+                pointer.next = newNode;
+                break;
+            }
+
+            pointer = pointer.next;
+
+            pointer=pointer.next;
+
+
+        }
+
+
+    }
+
+    public void insertAfter(T value, T newValue) {
+        Node pointer = head;
+        Node newNode = new Node(newValue);
+        if (pointer.next == null) {
+            insert(newValue);
+        }
+        while (pointer != null) {
+
+
+            if (pointer.value == value) {
+                newNode.next = pointer.next;
+                pointer.next = newNode;
+
+            if (pointer.value==value){
+                newNode.next= pointer.next;
+                pointer.next= newNode;
+
+                break;
+            }
+            pointer = pointer.next;
+        }
+
+
+    }
+
+    public int kthFromFront(int k) {
+
+
+        Node current = head;
+        int count = 0;
+        while (current != null) {
+            if (count == k) {
+                return (int) current.value;
+            }
+            count++;
+            current = current.next;
+
+
+
+        Node current = head;
+        int count = 0;
+        while (current != null)
+        {
+            if (count == k){
+                return (int) current.value;}
+            count++;
+            current = current.next;
+
+
+
+        }
+
+        throw new NoSuchElementException("the key you are looking for not found ");
+    }
+
+
+
+        }
+
+        throw new NoSuchElementException("the key you are looking for not found ");
+    }
+
     public int size() {
         if(head == null) return -1;
 
@@ -127,7 +250,11 @@ try {
 }
 
 
+
     }
+
+
+
     public boolean include(T value) {
         Node pointer = this.head;
         try {
@@ -142,6 +269,7 @@ try {
         }
         return false;
     }
+
 
     public LinkedList zipList(LinkedList linkedList1, LinkedList linkedList2) {
         Node firstLinkedList = linkedList1.head;
@@ -170,6 +298,7 @@ try {
     public void reverseSinglyLinkedList() {
         Node pointer = this.head;
         Node previous = null;
+
         Node newNode;
         while (pointer != null) {
             newNode = pointer;
@@ -177,6 +306,27 @@ try {
             newNode.next = previous;
             previous = newNode;
             head = newNode;
+
+        Node newNode;
+        while (pointer != null) {
+            newNode = pointer;
+            pointer = pointer.next;
+            newNode.next = previous;
+            previous = newNode;
+            head = newNode;
+
+    public void  reverseSinglyLinkedList(){
+        Node pointer =this.head;
+        Node previous =null;
+        Node newNode;
+        while (pointer!= null){
+            newNode=pointer;
+            pointer=pointer.next;
+            newNode.next=previous;
+            previous=newNode;
+            head=newNode;
+
+
         }
 
     }
