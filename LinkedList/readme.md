@@ -7,6 +7,7 @@ how to move from one node to another and make pointer refer to next node and mak
 Bigo(1) for time and space
 ## API
 insert method it will insert node to the linked list  from the end   
+
 Include method it will check if the node exist in the LinkedList or not   
 append method it will add node at the end of linked list  
 InsertBefore method will add node before specific node   
@@ -17,3 +18,7 @@ method that will merge 2 linked list
 ## kthFromEnd
 method that will return the node index if the key are the same if key not the same it will give an exception
 ![kth](https://user-images.githubusercontent.com/97651232/159586298-01d54236-fe60-47b4-875e-4cd182a0925c.png)
+
+
+
+
