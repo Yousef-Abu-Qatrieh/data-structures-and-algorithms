@@ -56,10 +56,10 @@ public class App {
         maxStack.getMax();
         maxStack.peekTopMaxStack();
         System.out.println("*********************************animal shelter*********************************");
-        AnimalShelter animalShelter=new AnimalShelter();
-        Animal dog=new Dog("Dog");
-        Animal cat=new Cat("Cat");
-        Animal animal=new Animal("tyger");
+        AnimalShelter animalShelter = new AnimalShelter();
+        Animal dog = new Dog("Dog");
+        Animal cat = new Cat("Cat");
+        Animal animal = new Animal("tyger");
         animalShelter.enqueue(dog);
         animalShelter.enqueue(dog);
         animalShelter.enqueue(cat);
@@ -72,4 +72,6 @@ public class App {
 
     }
 
+
 }
+

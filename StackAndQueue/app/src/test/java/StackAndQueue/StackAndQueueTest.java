@@ -169,6 +169,21 @@ void testGetMax(){
     int actual=maxStack.getMax();
     assertEquals(expected,actual);
 }
+    @Test
+    public void testValidateParentheses(){
+        boolean actual = MaxStack.validateParentheses("{}{Code}[Fellows](())");
+        assertEquals(true , actual);
+    }
+    @Test
+    public void testValidateParenthesesExpectedFailure(){
+        boolean actual = MaxStack.validateParentheses("[({}]");
+        assertEquals(false , actual);
+    }
 
+    @Test
+    public void testEdgeCase(){
+        boolean actual = MaxStack.validateParentheses("({}[])");
+        assertEquals(true , actual);
+    }
 
 }

@@ -59,6 +59,26 @@ public class MaxStack {
         return maxNode;
     }
 
+    public static boolean validateParentheses(String text) {
+
+        Stack stack = new Stack();
+        for (char symbol : text.toCharArray()) {
+            if (symbol == '(' || symbol == '{' || symbol == '[') {
+                stack.push(symbol);
+            } else {
+                if (!stack.isEmpty()) {
+                    char top = (Character) stack.peek();
+                    if (symbol == ')' && top == '(' || symbol == '}' && top == '{' || symbol == ']' && top == '[') {
+                        stack.pop();
+                    }
+                } else if (symbol == ')' || symbol == '}' || symbol == ']') {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+
+    }
 
 }
 
