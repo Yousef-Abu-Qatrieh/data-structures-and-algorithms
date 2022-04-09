@@ -13,6 +13,7 @@ public class BinaryTree {
         PREORDER,
         POSTORDER
     }
+
     private BTNode root;
 
     public BTNode getRoot() {
@@ -24,13 +25,12 @@ public class BinaryTree {
     }
 
 
-
     public void levelOrderTraversal() {
         Queue<BTNode> queue = new LinkedList<BTNode>();
         queue.add(root);
         while (!queue.isEmpty()) {
             BTNode tempNode = queue.poll();
-            System.out.print(tempNode.getData() +"->");
+            System.out.print(tempNode.getData() + "->");
 
             if (tempNode.getLeft() != null) {
                 queue.add(tempNode.getLeft());
@@ -58,7 +58,7 @@ public class BinaryTree {
         }
     }
 
-    private void inOrder(BTNode treeNode) {
+    public void inOrder(BTNode treeNode) {
         if (treeNode == null) { // base case
             return;
         }
@@ -70,7 +70,7 @@ public class BinaryTree {
         inOrder(treeNode.getRight()); // right
     }
 
-    private void preOrder(BTNode treeNode) {
+    public void preOrder(BTNode treeNode) {
         if (treeNode == null) {
             return;
         }
@@ -82,7 +82,7 @@ public class BinaryTree {
         preOrder(treeNode.getRight());
     }
 
-    private void postOrder(BTNode treeNode) {
+    public void postOrder(BTNode treeNode) {
 
         if (treeNode == null) {
             return;
@@ -94,9 +94,31 @@ public class BinaryTree {
 
         printNode(treeNode);
     }
-    private void printNode(BTNode node) {
+
+    public void printNode(BTNode node) {
 
         System.out.print(node.getData() + "->");
+    }
+
+    public int findMaxNodeValue(BTNode<Integer> node) {
+        if (root == null) {
+            System.out.println("Tree is empty");
+            return 0;
+        } else {
+            int leftMaxNode;
+            int rightMaxNode;
+            int maxNode = node.getData();
+            if (node.getLeft() != null) {
+                leftMaxNode = findMaxNodeValue(node.getLeft());
+                maxNode = Math.max(maxNode, leftMaxNode);
+            }
+            if (node.getRight() != null) {
+                rightMaxNode = findMaxNodeValue(node.getRight());
+                maxNode = Math.max(maxNode, rightMaxNode);
+            }
+            return maxNode;
+        }
+
     }
 
 }

@@ -134,4 +134,21 @@ class AppTest {
         binarySearchTree.add(80);
         assertTrue(binarySearchTree.contains(73));
     }
+    @Test
+    void testMAXElementInBinaryTree(){
+    BinaryTree binaryTree = new BinaryTree();
+
+        binaryTree.setRoot( new BTNode(15));
+        binaryTree.getRoot().setLeft( new BTNode(20));
+        binaryTree.getRoot().setRight(new BTNode(35));
+        binaryTree.getRoot().getLeft().setLeft(new BTNode(74));
+        binaryTree.getRoot().getRight().setLeft( new BTNode(55));
+        binaryTree.getRoot().getRight().setRight( new BTNode(6));
+        int expected =74;
+
+
+        assertEquals( expected,binaryTree.findMaxNodeValue(binaryTree.getRoot()));
+        System.out.println("\n");
+        System.out.println("Largest element in the binary tree: " + binaryTree.findMaxNodeValue(binaryTree.getRoot()));
+}
 }

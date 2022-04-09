@@ -1,6 +1,6 @@
 package tree.data;
 
-public class BTNode {
+public class BTNode<T> {
 
     private int data;
 

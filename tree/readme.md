@@ -14,14 +14,17 @@ in order
 post order which returns an array of the values, ordered appropriately.  
 
 
-Binary Search Tree
-Create a Binary Search Tree class
-This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:
-Add
-Arguments: value
-Return: nothing
-Adds a new node with that value in the correct location in the binary search tree.
-Contains
-Argument: value
-Returns: boolean indicating whether or not the value is in the tree at least once.
+Binary Search Tree  
+Create a Binary Search Tree class   
+This class should be a sub-class (or your languages equivalent) of the Binary Tree Class, with the following additional methods:   
+Add    
+Arguments: value   
+Return: nothing    
+Adds a new node with that value in the correct location in the binary search tree.   
+Contains   
+Argument: value   
+Returns: boolean indicating whether or not the value is in the tree at least once.   
 
+findMaxNodeValue
+This method will search on the max node value  inside tree using binary tree    
+![find max in tree](https://user-images.githubusercontent.com/97651232/162583139-ae6d528a-6589-4626-adca-1cd78df257f8.png)

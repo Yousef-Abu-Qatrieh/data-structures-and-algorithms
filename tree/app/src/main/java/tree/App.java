@@ -52,6 +52,8 @@ public class App {
         binaryTree.traverse(BinaryTree.TraversalOrder.POSTORDER);
         System.out.println("\n");
         binaryTree.traverse(BinaryTree.TraversalOrder.PREORDER);
+        System.out.println("dddd");
+
 
     }
 }
