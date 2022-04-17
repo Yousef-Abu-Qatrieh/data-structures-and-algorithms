@@ -4,6 +4,7 @@ package tree.structure;
 import tree.data.BTNode;
 import tree.data.Node;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -119,6 +120,25 @@ public class BinaryTree {
             return maxNode;
         }
 
+    }
+    public ArrayList breadthFirst() {
+        ArrayList<Integer> arrayList=new ArrayList();
+        Queue<BTNode> queue = new LinkedList<BTNode>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            BTNode tempNode = queue.poll();
+//            System.out.print(tempNode.getData() + "->");
+            arrayList.add(tempNode.getData());
+
+            if (tempNode.getLeft() != null) {
+                queue.add(tempNode.getLeft());
+            }
+
+            if (tempNode.getRight() != null) {
+                queue.add(tempNode.getRight());
+            }
+        }
+        return arrayList;
     }
 
 }

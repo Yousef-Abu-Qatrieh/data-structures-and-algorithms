@@ -28,3 +28,6 @@ Returns: boolean indicating whether or not the value is in the tree at least onc
 findMaxNodeValue
 This method will search on the max node value  inside tree using binary tree    
 ![find max in tree](https://user-images.githubusercontent.com/97651232/162583139-ae6d528a-6589-4626-adca-1cd78df257f8.png)
+bridthFirst   
+This method will return array list of tree node value that traverse by each level   
+![image](https://user-images.githubusercontent.com/97651232/163709601-e162630f-fda4-471b-bcd5-10e2019e2953.png)

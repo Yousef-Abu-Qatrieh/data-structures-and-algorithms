@@ -17,12 +17,12 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
         // Binary search tree
-        binarySimulator(new BinaryTree());
+        testBreadthFirst(new BinaryTree());
         System.out.println("\n");
 
 
         System.out.println("*******************");
-
+        System.out.println("*******************");
         // Binary search tree
         BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
         binarySearchTree.add(50);
@@ -35,25 +35,29 @@ public class App {
 
     }
 
-    public static void binarySimulator(BinaryTree binaryTree) {
+    public static void testBreadthFirst(BinaryTree binaryTree) {
 
         //root level 1
-        binaryTree.setRoot(new BTNode(8));
+        binaryTree.setRoot(new BTNode(2));
         //level 2
-        binaryTree.getRoot().setLeft(new BTNode(4));
-        binaryTree.getRoot().setRight(new BTNode(15));
+        binaryTree.getRoot().setLeft(new BTNode(7));
+        binaryTree.getRoot().setRight(new BTNode(5));
         //level 3
-        binaryTree.getRoot().getLeft().setLeft(new BTNode(12));
-        binaryTree.getRoot().getLeft().setRight(new BTNode(19));
-        binaryTree.getRoot().getRight().setLeft(new BTNode(9));
-        binaryTree.getRoot().getRight().setRight(new BTNode(17));
-        binaryTree.levelOrderTraversal();
-        System.out.println("*********************8");
-        binaryTree.traverse(BinaryTree.TraversalOrder.POSTORDER);
-        System.out.println("\n");
-        binaryTree.traverse(BinaryTree.TraversalOrder.PREORDER);
-        System.out.println("dddd");
+        binaryTree.getRoot().getLeft().setLeft(new BTNode(2));
+        binaryTree.getRoot().getLeft().setRight(new BTNode(6));
+        binaryTree.getRoot().getRight().setRight(new BTNode(9));
+        //level 4
+        binaryTree.getRoot().getLeft().getRight().setLeft(new BTNode(5));
+        binaryTree.getRoot().getLeft().getRight().setRight(new BTNode(11));
+        binaryTree.getRoot().getRight().getRight().setLeft(new BTNode(4));
+        System.out.println( binaryTree.breadthFirst());
+//        System.out.println("*********************8");
+//        binaryTree.traverse(BinaryTree.TraversalOrder.POSTORDER);
+//        System.out.println("\n");
+//        binaryTree.traverse(BinaryTree.TraversalOrder.PREORDER);
+//        System.out.println("dddd");
 
 
     }
+
 }
