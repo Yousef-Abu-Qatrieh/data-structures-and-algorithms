@@ -2,23 +2,23 @@ package tree.data;
 
 public class BTNode<T> {
 
-    private int data;
+    private T data;
 
     private BTNode left;
     private BTNode right;
 
-    public BTNode(int data) {
+    public BTNode(T data) {
         this.data = data;
     }
 
     public BTNode() {
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 

@@ -31,3 +31,7 @@ This method will search on the max node value  inside tree using binary tree
 bridthFirst   
 This method will return array list of tree node value that traverse by each level   
 ![image](https://user-images.githubusercontent.com/97651232/163709601-e162630f-fda4-471b-bcd5-10e2019e2953.png)
+
+FizzBuzz  
+This method will return fizz the number mod 3 equal zero it will return also buzz if  the number mod 5 equal zero and it will return also FizzBuzz if  the number mod 15 equal zero  
+![done](https://user-images.githubusercontent.com/97651232/164948262-7440cb79-d721-4d5a-88d8-a9561110ddd1.png)

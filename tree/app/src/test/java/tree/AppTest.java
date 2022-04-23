@@ -132,7 +132,9 @@ class AppTest {
         binarySearchTree.add(40);
         binarySearchTree.add(73);
         binarySearchTree.add(80);
+
         assertTrue(binarySearchTree.contains(73));
+
     }
     @Test
     void testMAXElementInBinaryTree(){
@@ -151,4 +153,5 @@ class AppTest {
         System.out.println("\n");
         System.out.println("Largest element in the binary tree: " + binaryTree.findMaxNodeValue(binaryTree.getRoot()));
 }
+
 }

@@ -128,7 +128,7 @@ public class BinaryTree {
         while (!queue.isEmpty()) {
             BTNode tempNode = queue.poll();
 //            System.out.print(tempNode.getData() + "->");
-            arrayList.add(tempNode.getData());
+            arrayList.add((Integer) tempNode.getData());
 
             if (tempNode.getLeft() != null) {
                 queue.add(tempNode.getLeft());
@@ -141,4 +141,32 @@ public class BinaryTree {
         return arrayList;
     }
 
+
+    public  BinaryTree fizzBuzzTree (BinaryTree tree, BTNode<String> node) {
+
+        if (node !=null){
+            if ((Integer.parseInt(node.getData()) % 3)==0){
+                node.setData("Fizz");
+            }
+
+            else if ((Integer.parseInt(node.getData()) % 5)==0){
+                node.setData("Buzz");
+            }
+            else if ((Integer.parseInt(node.getData()) % 15)==0){
+                node.setData("FizzBuzz");
+            }
+
+            if (tree.root.getLeft()!= null){
+                fizzBuzzTree(tree, node);
+            }
+            if (tree.root.getRight()!= null){
+                fizzBuzzTree(tree, node);
+            }
+        }
+        return tree;
+    }
 }
+
+
+
+
