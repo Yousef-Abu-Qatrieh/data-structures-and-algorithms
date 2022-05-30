@@ -131,6 +131,18 @@ public class BinarySearchTree<T extends Comparable<T>> {
         else
             return true;
     }
+   public void oddNode(Node root)
+    { int sum=0;
+        if (root != null) {
+            oddNode(root.getLeftNode());
+
+            // if node is odd then print it
+            if (root.getData() % 2 != 0)
+                System.out.print(sum+=root.getData() );
+
+            oddNode(root.getRightNode());
+        }
+    }
 
 }
 

@@ -165,7 +165,34 @@ public class BinaryTree {
         }
         return tree;
     }
+    public int calculateSum(BTNode temp){
+        int sum, sumLeft, sumRight;
+        sum = sumRight = sumLeft = 0;
+
+        //Check whether tree is empty
+        if(root == null) {
+            System.out.println("Tree is empty");
+            return 0;
+        }
+        else {
+            //Calculate the sum of nodes present in left subtree
+            if(temp.getLeft() != null)
+                if ((int)(temp.getData()) % 2 != 0)
+                sumLeft = calculateSum(temp.getLeft());
+
+            //Calculate the sum of nodes present in right subtree
+            if(temp.getRight() != null)
+
+                sumRight = calculateSum(temp.getRight());
+
+            //Calculate the sum of all nodes by adding sumLeft, sumRight and root node's data
+            sum = ((int)temp.getData() )+ sumLeft + sumRight;
+            return sum;
+        }
+
+    }
 }
+
 
 
 

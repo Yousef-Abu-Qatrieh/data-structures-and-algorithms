@@ -16,19 +16,12 @@ public class App {
 
     public static void main(String[] args) {
 
-            Integer x =Integer.valueOf(9);
-            Double c = Double.valueOf(5);
-            Float a = Float.valueOf("80");
-            String b = String.valueOf("fizz");
 
-            System.out.println(x);
-            System.out.println(c);
-            System.out.println(a);
-            System.out.println(b);
 
         System.out.println(new App().getGreeting());
         // Binary search tree
         testBreadthFirst(new BinaryTree());
+
         System.out.println("\n");
 
 
@@ -43,6 +36,7 @@ public class App {
         binarySearchTree.add(70);
 
         binarySearchTree.traverse(BinarySearchTree.TraversalOrder.INORDER);
+
 
     }
 
