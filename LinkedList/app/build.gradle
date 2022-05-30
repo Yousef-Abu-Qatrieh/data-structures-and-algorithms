@@ -20,6 +20,8 @@ repositories {
 dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 testing {
@@ -35,4 +37,8 @@ testing {
 application {
     // Define the main class for the application.
     mainClass = 'LinkedList.App'
+}
+
+test {
+    useJUnitPlatform()
 }
