@@ -99,7 +99,17 @@ public class HashMap<K, V> {
     // method will check if the key exist in the Hashmap or not
     public boolean contains(K key) {
 
-        return keyOfSet.contains(key);
+        int index = getBucketIndex(key);
+
+        HashNode<K, V> head = bucketArray.get(index);
+
+        while (head != null) {
+            if (head.getKey().equals(key) && head.getHashCode() == hashCode(key)) {
+                return true;
+            }
+            head = head.getNext();
+        }
+        return false;
 
     }
 
@@ -131,7 +141,30 @@ public class HashMap<K, V> {
         return allValues;
     }
 
+    public String repeatedWord(String str) {
+        String word = str.toLowerCase(Locale.ROOT).replace(",", "");
+        String[] listOfWords = word.split(" ");
+        HashMap<String, Integer> repeatedWord = new HashMap<>();
+        for (String wrd : listOfWords) {
+            if (repeatedWord.contains(wrd)) {
+                // if word or letter exist inside the string
+                repeatedWord.set(wrd, repeatedWord.get(wrd) + 1);
+                // will return the first duplicate letter or word
+                return wrd;
+            } else
+                /*
+                it will add new word to the list of repeated word if he found it during the next search
+                 he will back it as duplicated word
+                 */
+                repeatedWord.set(wrd, 1);
+        }
+        return "There is no redundant word";
+
+    }
 
 }
+
+
+
 
 
