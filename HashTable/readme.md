@@ -42,4 +42,10 @@ Returns: Collection of keys
 
 hash
 Arguments: key    
-Returns: Index in the collection for that key  
+Returns: Index in the collection for that key 
+
+Repeated Word
+Write a function called repeated word that finds the first word to occur more than once in a string   
+Arguments: string  
+Return: string  
+![](../../../Desktop/Screenshot 2022-06-27 235216.png)

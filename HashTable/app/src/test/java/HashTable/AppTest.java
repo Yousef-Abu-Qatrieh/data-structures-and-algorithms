@@ -95,14 +95,40 @@ class AppTest {
     public void testHashCode() {
         HashMap<String,String> countryCities=new HashMap<>();
         countryCities.set("Jordan","Amman");
-        countryCities.set("United States","Washington D.C.");
-        countryCities.set("United Kingdom","London");
-        countryCities.set("Italy","Rome");
-        countryCities.set("France","Paris");
-        countryCities.set("Portugal","Lisbon");
         int result=countryCities.hashCode();
-        int expected=1710814638;
+        int expected=1471948789;
         assertEquals(result,expected);
+
+    }
+    @Test
+    public void testRepeatedWord(){
+
+            HashMap<String, String> hashMap = new HashMap<>();
+
+            String result = "a";
+            String expected = hashMap.repeatedWord("once upon a time, there was a brave princess who...");
+
+        assertEquals(result,expected );
+
+        }
+    @Test
+    public void secondTestForRepeatedWord(){
+
+        HashMap<String, String> hashMap = new HashMap<>();
+
+        String result = "it";
+        String expected = hashMap.repeatedWord("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...");
+
+        assertEquals(result,expected );
+
+    }
+    @Test
+    public void noRepeatedWord(){
+        HashMap<String, String> hashMap = new HashMap<>();
+
+        String result = "There is no redundant word";
+        String expected = hashMap.repeatedWord("god bless you");
+        assertEquals(result,expected );
 
     }
 }
