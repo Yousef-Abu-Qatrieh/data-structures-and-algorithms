@@ -99,7 +99,7 @@ class AppTest {
         HashMap<String,String> countryCities=new HashMap<>();
         countryCities.set("Jordan","Amman");
         int result=countryCities.hashCode();
-        int expected=201719260;
+        int expected=1293226111;
         assertEquals(result,expected);
 
     }
@@ -203,5 +203,14 @@ class AppTest {
         assertEquals(expected, result);
 
     }
+    @Test
+    public void commonWordTest(){
 
+        HashMap<String, String> hashMap = new HashMap<>();
+
+        String result = "far";
+        String expected = hashMap.commonWord("In a galaxy far far away");
+        assertEquals(result,expected );
+
+    }
 }

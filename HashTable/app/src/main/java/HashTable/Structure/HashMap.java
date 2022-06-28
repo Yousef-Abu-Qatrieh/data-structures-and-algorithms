@@ -196,6 +196,10 @@ public class HashMap<K, V> {
         return result;
     }
 
+    public String commonWord(String str){
+        return repeatedWord(str);
+    }
+
 }
 
 
