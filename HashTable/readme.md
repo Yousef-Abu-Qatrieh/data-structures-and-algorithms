@@ -49,3 +49,7 @@ Write a function called repeated word that finds the first word to occur more th
 Arguments: string  
 Return: string  
 ![Screenshot 2022-06-27 235216](https://user-images.githubusercontent.com/97651232/176034911-ddb658ac-00ba-4bd8-ae6e-18225dc7f33f.png)
+
+TreeIntersection   
+
+![image](https://user-images.githubusercontent.com/97651232/176089069-ddb2c39e-1bab-4028-acd1-f685d1791dc2.png)

@@ -89,8 +89,7 @@ public class HashMap<K, V> {
         int hashCode = hashCode(key);
         HashNode<K, V> head = bucketArray.get(bucketIndex);
         while (head != null) {
-            if (head.getKey().equals(key) && head.getHashCode() == hashCode)
-                return head.getValue();
+            if (head.getKey().equals(key) && head.getHashCode() == hashCode) return head.getValue();
             head = head.getNext();
         }
         return null;
@@ -162,7 +161,24 @@ public class HashMap<K, V> {
 
     }
 
+    public HashSet<Integer> tree_intersection(BinaryTree tree1, BinaryTree tree2) {
+        HashSet<Integer> result = new HashSet<>();
+        if (tree1.getRoot() == null || tree2.getRoot() == null) {
+            return null;
+        } else {
+            List<Integer> traversTree1 = tree1.preOrder(tree1.getRoot());
+            List<Integer> traversTree2 = tree2.preOrder(tree2.getRoot());
+            for (Integer res : traversTree1) {
+                if (traversTree2.contains(res)) {
+                    result.add(res);
+                }
+            }
+            return result;
+        }
+    }
+
 }
+
 
 
 
