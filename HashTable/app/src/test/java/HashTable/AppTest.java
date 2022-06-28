@@ -3,11 +3,15 @@
  */
 package HashTable;
 
+import HashTable.Structure.BinaryTree;
 import HashTable.Structure.HashMap;
+import HashTable.data.BTNode;
+import HashTable.data.Node;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -96,7 +100,7 @@ class AppTest {
         HashMap<String,String> countryCities=new HashMap<>();
         countryCities.set("Jordan","Amman");
         int result=countryCities.hashCode();
-        int expected=1471948789;
+        int expected=1293203138;
         assertEquals(result,expected);
 
     }
@@ -129,6 +133,54 @@ class AppTest {
         String result = "There is no redundant word";
         String expected = hashMap.repeatedWord("god bless you");
         assertEquals(result,expected );
+
+    }
+
+    @Test
+    public void isTreeEmptyTest() {
+
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+        BinaryTree tree1 = new BinaryTree();
+
+        BinaryTree tree2 = new BinaryTree();
+
+        Set expected = hashMap.tree_intersection(tree1,tree2);
+
+        assertEquals(expected, null);
+
+
+    }
+
+    @Test
+    public void treeInsertionTest() {
+
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+       BinaryTree tree1 = new BinaryTree();
+        tree1.setRoot(new BTNode(42));
+        tree1.getRoot().setLeft(new BTNode(100));
+        tree1.getRoot().setRight(new BTNode(200));
+        tree1.getRoot().getLeft().setLeft(new BTNode(160));
+        tree1.getRoot().getLeft().setRight(new BTNode(250));
+
+
+        BinaryTree tree2 = new BinaryTree();
+        tree2.setRoot(new BTNode(150));
+        tree2.getRoot().setLeft(new BTNode(100));
+        tree2.getRoot().setRight(new BTNode(250));
+        tree2.getRoot().getLeft().setLeft(new BTNode(160));
+        tree2.getRoot().getLeft().setRight(new BTNode(75));
+
+        HashSet<Integer> result =new HashSet<>();
+        result.add(160);
+        result.add(100);
+        result.add(250);
+
+       HashSet  expected = hashMap.tree_intersection(tree1, tree2);
+
+        assertEquals(expected, result);
+
 
     }
 }
