@@ -177,6 +177,25 @@ public class HashMap<K, V> {
         }
     }
 
+    public List<ArrayList<String>> leftJoin(HashMap hash1, HashMap hash2) {
+
+        List<ArrayList<String>> result = new ArrayList<>();
+        List setKeyForHash = hash1.keys();
+
+        for (Object key : setKeyForHash) {
+            List<String> strings = new ArrayList<>();
+            strings.add((String) key);
+            strings.add((String) hash1.get(key));
+            if (hash2.contains(key)) {
+                strings.add((String) hash2.get(key));
+            } else {
+                strings.add(null);
+            }
+            result.add((ArrayList<String>) strings);
+        }
+        return result;
+    }
+
 }
 
 

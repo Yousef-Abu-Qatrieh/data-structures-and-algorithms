@@ -53,3 +53,6 @@ Return: string
 TreeIntersection   
 
 ![image](https://user-images.githubusercontent.com/97651232/176089069-ddb2c39e-1bab-4028-acd1-f685d1791dc2.png)
+
+LeftJoin   
+![image](https://user-images.githubusercontent.com/97651232/176166297-1963dcfa-8e6d-4afe-82de-cb7271cb9473.png)

@@ -6,7 +6,6 @@ package HashTable;
 import HashTable.Structure.BinaryTree;
 import HashTable.Structure.HashMap;
 import HashTable.data.BTNode;
-import HashTable.data.Node;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -100,7 +99,7 @@ class AppTest {
         HashMap<String,String> countryCities=new HashMap<>();
         countryCities.set("Jordan","Amman");
         int result=countryCities.hashCode();
-        int expected=1293203138;
+        int expected=201719260;
         assertEquals(result,expected);
 
     }
@@ -183,4 +182,26 @@ class AppTest {
 
 
     }
+    @Test
+    public void testLeftJoin(){
+        HashMap<String,String> hashMap=new HashMap<>();
+        HashMap<String , String> hashMap1 = new HashMap<>();
+        hashMap1.set("diligent" , "employed");
+        hashMap1.set("fond" , "enamored");
+        hashMap1.set("guide" , "usher");
+        hashMap1.set("outfit" , "garb");
+        hashMap1.set("wrath" , "anger");
+
+        HashMap<String , String> hashMap2 = new HashMap<>();
+        hashMap2.set("diligent" , "idle");
+        hashMap2.set("fond" , "averse");
+        hashMap2.set("guide" , "follow");
+        hashMap2.set("flow" , "jam");
+        hashMap2.set("wrath" , "delight");
+        String result = String.valueOf(hashMap.leftJoin(hashMap1,hashMap2));
+        String expected = "[[diligent, employed, idle], [wrath, anger, delight], [fond, enamored, averse], [guide, usher, follow], [outfit, garb, null]]";
+        assertEquals(expected, result);
+
+    }
+
 }
