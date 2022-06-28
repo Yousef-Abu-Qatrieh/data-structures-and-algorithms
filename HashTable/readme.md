@@ -56,3 +56,6 @@ TreeIntersection
 
 LeftJoin   
 ![image](https://user-images.githubusercontent.com/97651232/176166297-1963dcfa-8e6d-4afe-82de-cb7271cb9473.png)
+
+34
+![](https://user-images.githubusercontent.com/97651232/176172687-ebd04291-6de3-41fe-a192-8e1978e7475a.png)
