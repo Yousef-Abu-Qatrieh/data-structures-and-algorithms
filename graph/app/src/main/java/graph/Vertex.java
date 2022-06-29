@@ -15,6 +15,14 @@ public class Vertex {
         this.data = data;
     }
 
+    public String getData() {
+        return data;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
     @Override
     public String toString() {
         return "Vertex{" +

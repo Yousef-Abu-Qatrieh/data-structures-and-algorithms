@@ -33,4 +33,8 @@ size:
 get the size of all graph node
 
 BreadthFirstTravers  
-![image](https://user-images.githubusercontent.com/97651232/176350204-c253c890-c445-487d-9393-0ab9f53dad85.png)
+![image](https://user-images.githubusercontent.com/97651232/176350204-c253c890-c445-487d-9393-0ab9f53dad85.png)   
+
+BusinessTrip
+![image](https://user-images.githubusercontent.com/97651232/176357086-20b34c61-f4c9-472a-978e-88f5c1ed7093.png)
+
