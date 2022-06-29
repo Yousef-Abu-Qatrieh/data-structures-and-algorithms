@@ -36,5 +36,9 @@ BreadthFirstTravers
 ![image](https://user-images.githubusercontent.com/97651232/176350204-c253c890-c445-487d-9393-0ab9f53dad85.png)   
 
 BusinessTrip
-![image](https://user-images.githubusercontent.com/97651232/176357086-20b34c61-f4c9-472a-978e-88f5c1ed7093.png)
+![image](https://user-images.githubusercontent.com/97651232/176357086-20b34c61-f4c9-472a-978e-88f5c1ed7093.png)   
+
+DepthFirstTravers
+![image](https://user-images.githubusercontent.com/97651232/176360689-58866ffc-6a2c-467e-9cba-d3d5b9cb640f.png)  
+
 
