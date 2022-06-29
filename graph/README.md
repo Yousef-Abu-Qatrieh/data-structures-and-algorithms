@@ -12,6 +12,14 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 3.get nodes   
 4.get neighbors  
 5.size
+## Approach & Efficiency
+Using hashmap tp store vertex as key and the edges as array list  
+
+Time :
+Big O (n)  
+Space :
+O(n + 2e) // e is number of edge
+
 ## Api
 add node :
 it will Add new vertex  
@@ -23,3 +31,6 @@ get neighbors:
 get all neighbors of specific node
 size: 
 get the size of all graph node
+
+BreadthFirstTravers  
+![image](https://user-images.githubusercontent.com/97651232/176350204-c253c890-c445-487d-9393-0ab9f53dad85.png)

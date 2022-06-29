@@ -6,6 +6,7 @@ package graph;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -102,5 +103,23 @@ class AppTest {
         String expected = "" ;
         String result = graph.printGraph();
         assertEquals(expected, result);
+    }
+    @Test
+    public void breadthFirstTest(){
+        Graph graph = new Graph();
+
+        graph.addVertex("A" );
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addEdges("A","B");
+        graph.addEdges("B","C");
+        graph.addEdges("A","C");
+        HashSet<String> set = graph.breadthFirstTraversal("A");
+        HashSet<String> expected = new HashSet<>();
+        expected.add("A");
+        expected.add("B");
+        expected.add("C");
+
+        assertEquals( expected.toString() , set.toString());
     }
 }
