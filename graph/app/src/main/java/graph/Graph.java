@@ -82,7 +82,9 @@ public class Graph {
         return adjVertices.size();
     }
 
-
+    public List<Vertex> getNeighbors(String data) {
+        return adjVertices.get(new Vertex(data));
+    }
     //    get neighbors
 
     public Collection<List<Vertex>> getNeighbors() {
@@ -131,6 +133,25 @@ public class Graph {
             sum += graph.getWeight(arrayList.get(i), arrayList.get(i + 1));
         }
         return sum;
+    }
+
+
+    public HashSet<String> depthFirst(String root) {
+        HashSet<String> visited = new HashSet<>();
+        Stack<String> stack = new Stack<>();
+        stack.push(root);
+        visited.add(root);
+        while (!stack.isEmpty()) {
+            String vertex = stack.pop();
+            for (Vertex v : this.getNeighbors(vertex)) {
+                if (!visited.contains((v.getData()))) {
+                    stack.push(v.getData());
+                    visited.add(v.getData());
+                }
+            }
+        }
+        return visited;
+
     }
 
 }
