@@ -42,6 +42,10 @@ public class Graph {
         adjVertices.get(vertex2).add(vertex1);
     }
 
+    public List<Vertex> getAdjVertices(String data) {
+        return adjVertices.get(new Vertex(data));
+    }
+
     public void removeVertex(String data) {
         Vertex vertex = new Vertex(data);
         adjVertices.values().forEach(list -> list.remove(vertex));
@@ -85,5 +89,21 @@ public class Graph {
         return adjVertices.values();
     }
 
+    public HashSet<String> breadthFirstTraversal(String root) {
+        HashSet<String> visited = new HashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(root);
+        visited.add(root);
+        while (!queue.isEmpty()) {
+            String vertex = queue.poll();
+            for (Vertex v : getAdjVertices(vertex)) {
+                if (!visited.contains((v.data))) {
+                    queue.add(v.data);
+                    visited.add(v.data);
+                }
+            }
+        }
+        return visited;
+    }
 
 }

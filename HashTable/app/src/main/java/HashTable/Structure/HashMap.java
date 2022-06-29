@@ -4,6 +4,8 @@ import HashTable.data.HashNode;
 
 import java.util.*;
 
+import static com.google.common.base.Strings.repeat;
+
 public class HashMap<K, V> {
     private ArrayList<HashNode<K, V>> bucketArray;
     private int buckets;
@@ -199,6 +201,11 @@ public class HashMap<K, V> {
     public String commonWord(String str){
         return repeatedWord(str);
     }
+
+
+
+
+
 
 }
 
