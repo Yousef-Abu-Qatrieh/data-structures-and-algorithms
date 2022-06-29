@@ -106,4 +106,31 @@ public class Graph {
         return visited;
     }
 
+    public int getWeight(String element, String visited) {
+        List<Vertex> list = adjVertices.get(new Vertex(element));
+        int weight = 0;
+        for (Vertex index :
+                list) {
+            System.out.println(index);
+            System.out.println(visited);
+            if (index.getData() == visited) {
+                weight = index.getWeight();
+
+
+            }
+        }
+
+        return weight;
+
+    }
+
+    public static int graphBusinessTrip(Graph graph, ArrayList<String> arrayList) {
+        int sum = 0;
+        for (int i = 0; i < arrayList.size() - 1; i++) {
+
+            sum += graph.getWeight(arrayList.get(i), arrayList.get(i + 1));
+        }
+        return sum;
+    }
+
 }

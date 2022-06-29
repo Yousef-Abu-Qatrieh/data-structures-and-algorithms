@@ -3,6 +3,10 @@
  */
 package graph;
 
+import java.util.ArrayList;
+
+import static graph.Graph.graphBusinessTrip;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -27,6 +31,27 @@ public class App {
 
 
 
+        Graph graph1 = new Graph();
 
+        graph1.addVertex("Pandora" );
+        graph1.addVertex("Arendelle");
+        graph1.addVertex("Monstropolis");
+        graph1.addVertex("Metroville");
+        graph1.addVertex("Naboo");
+        graph1.addVertex("Narnia");
+        graph.addEdge("Pandora","Arendelle" , 150);
+        graph.addEdge("Arendelle","Metroville" , 99);
+        graph.addEdge("Monstropolis","Naboo" , 73);
+        graph.addEdge("Arendelle","Monstropolis" , 42);
+        graph.addEdge("Naboo","Narnia" , 37);
+
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        arrayList.add("Arendelle");
+        arrayList.add("Monstropolis");
+        arrayList.add("Naboo");
+
+        System.out.println(graphBusinessTrip(graph1,arrayList ));
     }
-}
+    }
+
